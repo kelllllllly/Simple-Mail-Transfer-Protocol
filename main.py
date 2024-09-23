@@ -48,7 +48,7 @@ if recv4[:3] != '250':
 # Send message dadta.
 subject = "SMTP mail client program"
 clientSocket.send(subject.encode())
-message = raw_input("Hi. this is a test. \r\n")
+message = ("Hi. this is a test. \r\n")
 clientSocket.send(message.encode())
 clientSocket.send(endmsg.encode())
 recv5 = clientSocket.recv(1024)
